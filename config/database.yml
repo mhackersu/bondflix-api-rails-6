@@ -49,4 +49,5 @@ test:
 #
 production:
   <<: *default
+  adapter: activerecord-mysql2-adapter
   url: <%= ENV['JAWSDB_URL'] %>
