@@ -10,12 +10,11 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
+  adapter: postgresql
+  endoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: p455w0rd
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -49,8 +48,4 @@ test:
 #
 production:
   <<: *default
-  adapter: mysql2
-  host: <%= ENV['JAWSDB_HOST'] %>
-  database: <%= ENV['JAWSDB_DBNAME'] %>
-  username: <%= ENV['JAWSDB_USERNAME'] %>
-  password: <%= ENV['JAWSDB_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
