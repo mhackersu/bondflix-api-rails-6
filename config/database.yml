@@ -49,5 +49,8 @@ test:
 #
 production:
   <<: *default
-  adapter: activerecord-mysql2-adapter
-  url: <%= ENV['JAWSDB_URL'] %>
+  adapter: mysql2
+  host: <%= ENV['JAWSDB_HOST'] %>
+  database: <%= ENV['JAWSDB_DBNAME'] %>
+  username: <%= ENV['JAWSDB_USERNAME'] %>
+  password: <%= ENV['JAWSDB_PASSWORD'] %>
