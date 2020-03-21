@@ -104,5 +104,5 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Whitelist Heroku hostname
-  config.hosts << awesome-rails-api.herokuapp.com
+  config.hosts << "awesome-rails-api.herokuapp.com"
 end
