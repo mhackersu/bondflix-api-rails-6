@@ -50,6 +50,8 @@ GEM
     activerecord (6.0.2.2)
       activemodel (= 6.0.2.2)
       activesupport (= 6.0.2.2)
+    activerecord-mysql2-adapter (0.0.3)
+      mysql2
     activestorage (6.0.2.2)
       actionpack (= 6.0.2.2)
       activejob (= 6.0.2.2)
@@ -183,6 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  activerecord-mysql2-adapter
   bootsnap (>= 1.4.2)
   byebug
   factory_girl_rails
