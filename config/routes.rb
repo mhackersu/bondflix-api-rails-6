@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   constraints subdomain: 'awesome-rails-api' do
     scope module: 'api' do
       namespace :v1 do
-        resources :users
+        resources :users, :titles
       end
     end
   end
