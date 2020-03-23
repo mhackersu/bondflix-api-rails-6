@@ -10,9 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_204925) do
+ActiveRecord::Schema.define(version: 2020_03_21_200135) do
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "titles", force: :cascade do |t|
+    t.string "imdb_id"
+    t.string "title"
+    t.string "year"
+    t.string "rated"
+    t.string "released"
+    t.string "runtime"
+    t.string "genre"
+    t.string "director"
+    t.string "writers"
+    t.string "actors"
+    t.string "plot"
+    t.string "country"
+    t.string "language"
+    t.string "metascore"
+    t.string "poster"
+    t.string "rating"
+    t.string "votes"
+    t.string "budget"
+    t.string "opening_weekend"
+    t.string "gross"
+    t.string "production"
+    t.string "parent_id"
+    t.string "title_type"
+    t.string "session"
+    t.string "episode_id"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
