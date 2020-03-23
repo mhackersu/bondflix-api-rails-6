@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_03_21_200135) do
     t.string "gross"
     t.string "production"
     t.string "parent_id"
-    t.string "type"
+    t.string "title_type"
     t.string "session"
     t.string "episode_id"
     t.string "status"

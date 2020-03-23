@@ -21,7 +21,7 @@ class Title < ApplicationRecord
   attribute :gross, :string 
   attribute :production, :string 
   attribute :parent_id, :string 
-  attribute :type, :string 
+  attribute :title_type, :string 
   attribute :session, :string 
   attribute :episode_id, :string 
   attribute :status, :string 

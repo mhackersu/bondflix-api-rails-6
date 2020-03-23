@@ -4,7 +4,6 @@ class TitlesController < ApplicationController
   # GET /titles
   def index
     @titles = Title.all
-
     render json: @titles
   end
 
@@ -46,6 +45,6 @@ class TitlesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def title_params
-      params.require(:title).permit(:imdb_id, :title, :year, :rated, :released, :runtime, :genre, :director, :writers, :actors, :plot, :country, :language, :metascore, :poster, :rating, :votes, :budget, :opening_weekend, :gross, :production, :parent_id, :type, :session, :episode_id, :status)
+      params.require(:title).permit(:imdb_id, :title, :year, :rated, :released, :runtime, :genre, :director, :writers, :actors, :plot, :country, :language, :metascore, :poster, :rating, :votes, :budget, :opening_weekend, :gross, :production, :parent_id, :title_type, :session, :episode_id, :status)
     end
 end
