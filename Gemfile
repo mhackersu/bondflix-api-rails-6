@@ -23,12 +23,20 @@ gem 'puma', '~> 4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+# This lets us call on the ActiveRecord object as normal while
+# outputting a desirable API JSON format.
 gem 'active_model_serializers'
-gem 'rack-cors'
-gem 'smarter_csv'
+
+# Use Smarter CSV if needed - Currently using built-in CSV
+# gem 'smarter_csv'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
+
+# Let's protect from DDoS, brute-force, and hammering while also
+# tracking our requests.
+gem 'rack-attack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
