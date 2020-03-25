@@ -2,6 +2,7 @@
 
 ## Endpoint
 - Bond Titles - https://awesome-rails-api.herokuapp.com/v1/titles/
+- Dev API Shape - https://api.myjson.com/bins/ec93g
 
 * Ruby version
 `2.7.0`
